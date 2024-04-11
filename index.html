@@ -12,6 +12,8 @@
 3. 10 Wireshark commands = ws
 4. Using nmap scanner to perform port scanning of various forms (ACK, SYN, FIN, NULL, XMAS) = nsp
 5. Using TraceRoute, ping, ifconfig, netstat Command = tpin
+6. Cross site scripting = xss
+bWAPP Steps = bs
     </pre>
     <pre id="kl">
 from pynput.keyboard import Key, Listener
@@ -79,6 +81,49 @@ Open CMD as administrator &gt; type all the bello given codes
 4. ipconfig
 
 to run commands on linux : Run on gitbash
+    </pre>
+    <pre id="xss">
+&lt;?php 
+if(isset($_GET['login'])) 
+{ 
+echo "Enterd by you:<br>"; 
+echo "Email: ".$_GET['email']."<br>"; 
+echo "Password: ".$_GET['password']; 
+}
+?> 
+&lt;div> 
+&lt;form> 
+&lt;input type="text" name="email" placeholder="Email">&lt;br> 
+&lt;input type="password" name="password" placeholder="Password">&lt;br> 
+&lt;input type="submit" name="login" value="Login"> 
+&lt;/form> 
+&lt;/div>
+    </pre>
+    <pre id="bs">
+check if the bwapp folder exists in htdocs
+if not paste the bwapp folder in htdocs
+start xampp mysql and apache
+go to--&gt; localhost:8080/bwapp/install.php || 127.0.0.1:8080/install.php || localhost/bwapp/install.php
+
+then next tab--&gt;
+localhost:8080/bwapp/login.php || 127.0.0.1:8080/login.php || localhost/bwapp/login.php
+
+login with:
+username: bee
+password: bug
+set security level : low
+then login to bwapp
+
+then select :
+cross site scripting reflected(get)
+
+xss page apprears
+
+in first name : type-&gt; &lt;script>alert("this site is xss vulnerable")
+in last name: type-&gt; &lt;/script>
+
+in first name : type-&gt; &lt;script>alert(document.cookie)
+in last name: type-&gt; &lt;/script>
     </pre>
 </body>
 </html>
