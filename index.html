@@ -25,7 +25,7 @@ def on_press(key):
     logging.info(str(key))
 # This says, listener is on
 with Listener(on_press=on_press) as listener:
-    listener.join()        
+    listener.join()
     </pre>
     <pre id="nmap">
 Replace IP address from the actual host IP (IP here is 192.168.1.100)
@@ -54,13 +54,20 @@ Open cmd inside wireshark folder and then write wireshark to initiate the applic
 8. wireshark -y smtp
 9. wireshark -y ftp
 10. wireshark -y telnet
+
+To perform sniffing
+https://techpanda.org/index.php
+admin@google.com
+Password2010
     </pre>
     <pre id="nsp">
-ACK Scan = nmap -sA target_ip
-SYN Scan = nmap -sS target_ip
-FIN Scan = nmap -sF target_ip
-NULL Scan = nmap -sN target_ip
-XMAS Scan = nmap -sX target_ip
+ACK Scan = nmap -sA mu.ac.in
+SYN Scan = nmap -sS mu.ac.in || nmap -p 22,113,139 scanme.nmap.org
+FIN Scan = nmap -sF -T4 mu.ac.in
+NULL Scan = nmap -sN mu.ac.in
+XMAS Scan = nmap -sX mu.ac.in
+
+If this URL fails then try : scname.nmap.org
     </pre>
     <pre id="tpin">
 Steps:
@@ -75,3 +82,4 @@ to run commands on linux : Run on gitbash
     </pre>
 </body>
 </html>
+
