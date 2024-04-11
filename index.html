@@ -10,6 +10,7 @@
 1. Create a simple keylogger using python/ other technology = kl
 2. 10 nmap commands = nmap
 3. 10 Wireshark commands = ws
+4. Using nmap scanner to perform port scanning of various forms (ACK, SYN, FIN, NULL, XMAS) = nsp
     </pre>
     <pre id="kl">
 from pynput.keyboard import Key, Listener
@@ -52,6 +53,13 @@ Open cmd inside wireshark folder and then write wireshark to initiate the applic
 8. wireshark -y smtp
 9. wireshark -y ftp
 10. wireshark -y telnet
+    </pre>
+    <pre id="nsp">
+ACK Scan = nmap -sA target_ip
+SYN Scan = nmap -sS target_ip
+FIN Scan = nmap -sF target_ip
+NULL Scan = nmap -sN target_ip
+XMAS Scan = nmap -sX target_ip
     </pre>
 </body>
 </html>
