@@ -16,6 +16,8 @@
 7. bWAPP Steps = bs
 8. SQL Injection = sql
 9. Keylogger in php = klp
+10. Dictionary Attack = da
+11. ARP Poisioning = arp
     </pre>
     <pre id="kl">
 from pynput.keyboard import Key, Listener
@@ -190,6 +192,66 @@ window.addEventListener("DOMContentLoaded", keylog.init);
 &lt;textarea>&lt;/textarea> 
 &lt;/body> 
 &lt;/html>
+    </pre>
+    <pre id="da">
+Use Cain and Abel for cracking Windows account password using Dictionary attack and to decode wireless network passwords 
+Performed :
+Step 1:  Open Cain and Abel tool
+    
+Step 2:  Click  on HASH Calcuator  ,Enter the password to convert into hash
+
+Step 3 : Take MD5 values and paste the value  into the MD5 Hashes field you have converted  
+    
+Step 4 : Right Click on the hash and select the dictionary attack 
+    
+Then  right click on the file and select (Add to List) and then select the Wordlist
+    </pre>
+    <pre id="arp">
+Precautions
+step 1: go to pc setting > virus and threat protection > turn off real time protection.
+turn off every protection
+    
+step 2:install winPcap software form google > an install the software
+    
+step 3 : disable ipv6
+go to ncpa.cpl type this in your window search box
+then click on wifi> properties > disable > unclick the checkbox of internet provider version 
+do same for ehternet
+    
+    
+step 4: enable dns suffix 
+    
+go to ncpa.cpl > wifi settings > ipv4> properties > advanced > DNS >click the last check box option 
+    
+    
+step 5: 
+run the command in window powershell as administrator : netsh int ip set global taskoffload=disable
+    
+    
+step 6: download cain and abel
+
+3.2) Perform ARP Poisoning in Windows .
+
+Step 1 : Open Cain and abel tool.
+    
+Step 2 : Select sniffer on the top. 
+    
+Step 3 : Next to folder icon click on icon name start/stop sniffer. Select device and click on ok. 
+    
+Step 4 : Click on “+” icon on the top. Click on ok. 
+    
+Step 5 : Shows the Connected host. 
+    
+Step 6 : Select APR at bottom. 
+    
+Step 7 : Click on “+” icon at the top. 
+    
+Step 8 : Click on start/stop ARP icon on top. 
+
+Step 9 : Poisoning the source. 
+    
+Step 10 (output bal)
+Step 11        
     </pre>
 </body>
 </html>
